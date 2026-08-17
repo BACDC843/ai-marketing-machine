@@ -1,0 +1,14 @@
+{
+  "name": "aimm",
+  "owner": {
+    "name": "AI Marketing Machine"
+  },
+  "description": "AI Marketing Machine \u2014 marketing content production for local small businesses, run inside your own Claude account.",
+  "plugins": [
+    {
+      "name": "ai-marketing-machine",
+      "source": "./",
+      "description": "Marketing content production for a small business, grounded in your own brand. Twenty-eight skills across social, blogs, ads, campaigns, SEO and performance. Works with no connectors configured."
+    }
+  ]
+}

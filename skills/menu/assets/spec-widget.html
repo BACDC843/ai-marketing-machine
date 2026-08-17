@@ -1,0 +1,164 @@
+<h2 class="sr-only">Job setup form. Choose options for each setting, fill in any details, then submit to start the job.</h2>
+
+<style>
+  .sp-wrap { font-size: 14px; color: var(--text-primary); }
+  .sp-head { margin-bottom: 1.5rem; }
+  .sp-title { font-size: 18px; font-weight: 500; margin: 0 0 5px; letter-spacing: -0.01em; }
+  .sp-sub { font-size: 13px; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+
+  .sp-field { margin-bottom: 1.5rem; }
+  .sp-label { font-size: 13px; font-weight: 500; color: var(--text-primary); margin: 0 0 3px; }
+  .sp-req { color: var(--text-secondary); font-weight: 400; font-size: 12px; }
+  .sp-hint { font-size: 12px; color: var(--text-secondary); margin: 0 0 9px; line-height: 1.4; }
+  .sp-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sp-chip {
+    font-size: 12.5px; padding: 6px 13px; border-radius: 999px;
+    border: 0.5px solid var(--border-strong); background: transparent;
+    color: var(--text-secondary); cursor: pointer; line-height: 1.3; font-family: inherit;
+  }
+  .sp-chip:hover { background: var(--surface-1); }
+  .sp-chip[aria-pressed="true"] {
+    background: var(--surface-1); color: var(--text-primary);
+    border-color: var(--text-primary); font-weight: 500;
+  }
+  .sp-other { margin-top: 8px; display: none; }
+  .sp-other.on { display: block; }
+
+  .sp-actions { display: flex; align-items: center; gap: 12px; margin-top: 1.75rem;
+                padding-top: 1.25rem; border-top: 0.5px solid var(--border); }
+  .sp-note { font-size: 12px; color: var(--text-secondary); }
+  .sp-err { font-size: 12px; color: var(--text-secondary); margin-top: 10px; display: none; }
+  .sp-err.on { display: block; }
+</style>
+
+<div class="sp-wrap">
+  <div class="sp-head">
+    <p class="sp-title" id="spTitle"></p>
+    <p class="sp-sub" id="spSub"></p>
+  </div>
+
+  <div id="spFields"></div>
+
+  <div class="sp-actions">
+    <button id="spGo">Start ↗</button>
+    <span class="sp-note" id="spNote"></span>
+  </div>
+  <p class="sp-err" id="spErr"></p>
+</div>
+
+<script>
+  (function () {
+    // ---- Config injected by the skill ------------------------------------
+    var CONFIG = /*CONFIG*/{
+      title: "Set up the job",
+      subtitle: "Pick what you want. Anything you skip, I'll choose a sensible default.",
+      submitNote: "",
+      intro: "Run the job with these settings:",
+      fields: []
+    };
+    // ---------------------------------------------------------------------
+
+    document.getElementById('spTitle').textContent = CONFIG.title || 'Set up the job';
+    document.getElementById('spSub').textContent = CONFIG.subtitle || '';
+    document.getElementById('spNote').textContent = CONFIG.submitNote || '';
+
+    var host = document.getElementById('spFields');
+    var state = {};
+
+    (CONFIG.fields || []).forEach(function (f) {
+      var wrap = document.createElement('div');
+      wrap.className = 'sp-field';
+
+      var label = document.createElement('p');
+      label.className = 'sp-label';
+      label.textContent = f.label;
+      if (f.required) {
+        var req = document.createElement('span');
+        req.className = 'sp-req';
+        req.textContent = '  · required';
+        label.appendChild(req);
+      }
+      wrap.appendChild(label);
+
+      if (f.hint) {
+        var hint = document.createElement('p');
+        hint.className = 'sp-hint';
+        hint.textContent = f.hint;
+        wrap.appendChild(hint);
+      }
+
+      if (f.type === 'text' || f.type === 'textarea') {
+        var input = document.createElement(f.type === 'textarea' ? 'textarea' : 'input');
+        if (f.type === 'textarea') { input.rows = 3; input.style.width = '100%'; input.style.resize = 'vertical'; }
+        else { input.type = 'text'; input.style.width = '100%'; }
+        input.placeholder = f.placeholder || '';
+        input.addEventListener('input', function () { state[f.id] = input.value.trim(); });
+        wrap.appendChild(input);
+      } else {
+        var chips = document.createElement('div');
+        chips.className = 'sp-chips';
+
+        var otherWrap = document.createElement('div');
+        otherWrap.className = 'sp-other';
+        var otherInput = document.createElement('input');
+        otherInput.type = 'text';
+        otherInput.placeholder = f.otherPlaceholder || 'Type it here';
+        otherInput.style.width = '100%';
+        otherInput.addEventListener('input', function () { state[f.id] = otherInput.value.trim(); });
+        otherWrap.appendChild(otherInput);
+
+        var opts = (f.options || []).concat(f.allowOther === false ? [] : ['Other']);
+        opts.forEach(function (opt, i) {
+          var b = document.createElement('button');
+          b.className = 'sp-chip';
+          b.type = 'button';
+          b.textContent = opt;
+          var isDefault = (typeof f.default === 'number' && f.default === i);
+          b.setAttribute('aria-pressed', isDefault ? 'true' : 'false');
+          if (isDefault) state[f.id] = opt;
+          b.addEventListener('click', function () {
+            Array.prototype.forEach.call(chips.querySelectorAll('.sp-chip'), function (c) {
+              c.setAttribute('aria-pressed', c === b ? 'true' : 'false');
+            });
+            if (opt === 'Other') {
+              otherWrap.classList.add('on');
+              state[f.id] = otherInput.value.trim();
+              otherInput.focus();
+            } else {
+              otherWrap.classList.remove('on');
+              state[f.id] = opt;
+            }
+          });
+          chips.appendChild(b);
+        });
+
+        wrap.appendChild(chips);
+        wrap.appendChild(otherWrap);
+      }
+
+      host.appendChild(wrap);
+    });
+
+    var err = document.getElementById('spErr');
+
+    document.getElementById('spGo').addEventListener('click', function () {
+      var missing = (CONFIG.fields || [])
+        .filter(function (f) { return f.required && !state[f.id]; })
+        .map(function (f) { return f.label; });
+
+      if (missing.length) {
+        err.textContent = 'Still needed: ' + missing.join(', ');
+        err.classList.add('on');
+        return;
+      }
+      err.classList.remove('on');
+
+      var lines = [CONFIG.intro || 'Run the job with these settings:'];
+      (CONFIG.fields || []).forEach(function (f) {
+        var v = state[f.id];
+        if (v) lines.push('- ' + f.label + ': ' + v);
+      });
+      sendPrompt(lines.join('\n'));
+    });
+  })();
+</script>

@@ -1,0 +1,136 @@
+<h2 class="sr-only">AI Marketing Machine start menu: twenty-one marketing jobs. Main cards: create a social post, build a carousel, plan a week of content, write a blog post, make a paid ad, plan a campaign, set up your business profile, check performance, browse templates. Also available: SEO audit, lead magnet, landing page, repurpose content, review a draft, schedule a post, portfolio report, check what is set up, help me post something with no plan, quick brand setup, getting started. A free-text box is available for anything else.</h2>
+
+<style>
+  .amm-wrap { font-size: 14px; color: var(--text-primary); }
+  .amm-head { margin-bottom: 1.25rem; }
+  .amm-title { font-size: 20px; font-weight: 500; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .amm-sub { font-size: 13px; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+
+  .amm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .amm-card {
+    text-align: left; background: var(--surface-2); border: 0.5px solid var(--border);
+    border-radius: 12px; padding: 1rem 1.25rem; cursor: pointer; width: 100%;
+    display: block; transition: background 0.12s ease;
+  }
+  .amm-card:hover { background: var(--surface-1); }
+  .amm-card:active { transform: scale(0.98); }
+  .amm-card.amm-primary { border-color: var(--text-primary); }
+  .amm-cardtitle { font-size: 14px; font-weight: 500; color: var(--text-primary); margin: 0 0 4px; }
+  .amm-carddesc { font-size: 12.5px; color: var(--text-secondary); margin: 0; line-height: 1.45; }
+  .amm-tag { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); display: block; margin-bottom: 6px; }
+
+  .amm-more { margin-top: 1.25rem; font-size: 12.5px; color: var(--text-secondary); line-height: 1.9; }
+  .amm-morelink {
+    background: none; border: none; padding: 0; font-size: 12.5px; cursor: pointer;
+    color: var(--text-primary); text-decoration: underline; text-underline-offset: 2px;
+    text-decoration-color: var(--border-strong); font-family: inherit;
+  }
+  .amm-morelink:hover { text-decoration-color: var(--text-primary); }
+  .amm-sep { color: var(--border-strong); margin: 0 6px; }
+
+  .amm-other { margin-top: 1.25rem; background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; }
+  .amm-otherrow { display: flex; gap: 8px; margin-top: 10px; }
+  .amm-otherrow input { flex: 1; }
+  .amm-foot { margin-top: 1rem; font-size: 12px; color: var(--text-secondary); text-align: center; }
+</style>
+
+<div class="amm-wrap">
+  <div class="amm-head">
+    <p class="amm-title">AI Marketing Machine</p>
+    <p class="amm-sub">On-brand marketing content, grounded in your real voice, audience, and products. Pick what you need.</p>
+  </div>
+
+
+  <div class="amm-grid">
+    <button class="amm-card amm-primary" data-p="Create a social post — copy, headline, caption, hashtags, and a finished branded graphic, ready to post">
+      <span class="amm-tag">Most used</span>
+      <p class="amm-cardtitle">Create a Social Post</p>
+      <p class="amm-carddesc">Copy, caption, hashtags, and a finished graphic in one run.</p>
+    </button>
+
+    <button class="amm-card" data-p="Build a carousel post — slide-by-slide copy and designed slides">
+      <p class="amm-cardtitle">Build a Carousel</p>
+      <p class="amm-carddesc">Instagram swipe post or LinkedIn document post.</p>
+    </button>
+
+    <button class="amm-card" data-p="Plan and produce a full week of social content — 7 graded posts with graphics">
+      <p class="amm-cardtitle">Plan a Week of Content</p>
+      <p class="amm-carddesc">Seven graded posts, each with its own graphic.</p>
+    </button>
+
+    <button class="amm-card" data-p="Write a blog post optimized for SEO and AI search visibility">
+      <p class="amm-cardtitle">Write a Blog Post</p>
+      <p class="amm-carddesc">Built to rank and to get cited by AI search.</p>
+    </button>
+
+    <button class="amm-card" data-p="Make a paid ad — brief the angle first, then write the Meta ad copy and creative">
+      <p class="amm-cardtitle">Make a Paid Ad</p>
+      <p class="amm-carddesc">Meta ad brief, copy, and visual direction.</p>
+    </button>
+
+    <button class="amm-card" data-p="Plan a full marketing campaign — objectives, channels, content calendar, and asset list">
+      <p class="amm-cardtitle">Plan a Campaign</p>
+      <p class="amm-carddesc">Multi-asset plan with a week-by-week calendar.</p>
+    </button>
+
+    <button class="amm-card" data-p="Set up or update my business profile">
+      <p class="amm-cardtitle">Business Profile</p>
+      <p class="amm-carddesc">Set up or update your brand context.</p>
+    </button>
+
+    <button class="amm-card" data-p="Check social performance — pull real Instagram and Facebook numbers and rank what worked">
+      <p class="amm-cardtitle">Check Performance</p>
+      <p class="amm-carddesc">Real Instagram and Facebook numbers, ranked.</p>
+    </button>
+
+    <button class="amm-card" data-p="Browse content templates — show the template gallery">
+      <p class="amm-cardtitle">Browse Templates</p>
+      <p class="amm-carddesc">Proven structures, so nothing starts blank.</p>
+    </button>
+  </div>
+
+  <div class="amm-more">
+    Also available:
+    <button class="amm-morelink" data-p="Run an SEO and local SEO audit">SEO audit</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Create a lead magnet — a gated downloadable asset for email capture">Lead magnet</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Build a landing page — section-by-section copy plus a coded HTML page">Landing page</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Repurpose an existing piece of content into another channel">Repurpose content</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Review a draft against brand voice before it ships">Review a draft</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Schedule an approved post to social platforms">Schedule a post</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Build a full marketing portfolio report from a website URL">Portfolio report</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Check what's set up and what's missing">What's set up?</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Help me post something — I don't have a plan yet">No plan yet?</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="Quick brand setup — six questions">Quick brand setup</button><span class="amm-sep">·</span>
+    <button class="amm-morelink" data-p="How do I get started, or I'm stuck">Getting started</button>
+  </div>
+
+  <div class="amm-other">
+    <p class="amm-cardtitle" style="margin-bottom:2px;">Something else</p>
+    <p class="amm-carddesc">Describe what you're working on and I'll route it.</p>
+    <div class="amm-otherrow">
+      <input type="text" id="ammOther" placeholder="e.g. 3 posts about the King St listing" />
+      <button id="ammSend">Send ↗</button>
+    </div>
+  </div>
+
+  <p class="amm-foot">Click an option above, or just tell me what you want to make.</p>
+</div>
+
+<script>
+  (function () {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-p]'), function (el) {
+      el.addEventListener('click', function () {
+        sendPrompt(el.getAttribute('data-p'));
+      });
+    });
+
+    var input = document.getElementById('ammOther');
+    function sendOther() {
+      var v = input.value.trim();
+      if (!v) return;
+      sendPrompt(v);
+    }
+    document.getElementById('ammSend').addEventListener('click', sendOther);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') sendOther(); });
+  })();
+</script>

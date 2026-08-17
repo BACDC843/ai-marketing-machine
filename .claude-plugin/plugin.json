@@ -1,0 +1,16 @@
+{
+  "name": "ai-marketing-machine",
+  "description": "Marketing content production for a small business, grounded in your own brand. Twenty-eight skills covering social posts, carousels, blogs, ads, campaigns, lead magnets, landing pages, SEO, and performance. Reads your voice, audience, and products from your own workspace at runtime, grades copy before it ships, and renders finished graphics to a local folder. Works with no connectors configured.",
+  "version": "0.8.0",
+  "author": {
+    "name": "AI Marketing Machine"
+  },
+  "keywords": [
+    "marketing",
+    "social-media",
+    "content",
+    "small-business",
+    "seo",
+    "branding"
+  ]
+}

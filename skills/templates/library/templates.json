@@ -1,0 +1,408 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-16",
+  "note": "Structural templates only — hook shapes, skeletons, and render presets. No brand values live here; every template is filled from Business/[slug]/context/ at runtime.",
+  "categories": [
+    {
+      "id": "post",
+      "label": "Single post"
+    },
+    {
+      "id": "carousel",
+      "label": "Carousel"
+    },
+    {
+      "id": "ad",
+      "label": "Paid ad"
+    },
+    {
+      "id": "other",
+      "label": "Other formats"
+    }
+  ],
+  "templates": [
+    {
+      "id": "price-gap",
+      "name": "The price gap",
+      "category": "post",
+      "when": "You want to qualify budget without stating a price, and take a position on how competitors quote.",
+      "hook": "Two [quotes/bids/proposals] for the same [thing] came in $[N] apart.",
+      "skeleton": [
+        "Hook: the gap, as a specific number",
+        "The assumption most people make about the gap, and why it's wrong",
+        "The actual mechanism, with 2-3 concrete specifics",
+        "Where the cost reappears later, and why leverage is gone by then",
+        "The one question that closes the gap"
+      ],
+      "render": {
+        "layout": "quote",
+        "ratio": "4:5"
+      },
+      "cta": "save"
+    },
+    {
+      "id": "hidden-defect",
+      "name": "What's behind the wall",
+      "category": "post",
+      "when": "Expertise post. Show what a professional sees that the buyer can't.",
+      "hook": "[N] years of [problem] were hiding behind one [ordinary thing].",
+      "skeleton": [
+        "Hook: the discovery, specific and physical",
+        "What the business saw and fell in love with",
+        "What you saw at the same moment",
+        "Why no inspection or walkthrough catches it",
+        "The process change that protects them"
+      ],
+      "render": {
+        "layout": "photo-overlay",
+        "ratio": "4:5"
+      },
+      "cta": "save"
+    },
+    {
+      "id": "timeline-reality",
+      "name": "Before you even start",
+      "category": "post",
+      "when": "Reset expectations on how long something really takes. Filters tire-kickers.",
+      "hook": "[N] weeks before you [obvious first step everyone pictures].",
+      "skeleton": [
+        "Hook: the number nobody expects",
+        "What that time is actually spent on",
+        "Why skipping it costs more than it saves",
+        "What a realistic sequence looks like",
+        "What to ask before signing anything"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "save"
+    },
+    {
+      "id": "contrarian-take",
+      "name": "The unpopular opinion",
+      "category": "post",
+      "when": "You hold a professional view most of your market disagrees with. Highest polarity, highest comment volume.",
+      "hook": "Everyone wants [popular thing]. We talk most businesses out of it.",
+      "skeleton": [
+        "Hook: state the position flatly, no hedging",
+        "Acknowledge honestly why the popular view is appealing",
+        "The specific case where it fails",
+        "What you recommend instead, and for whom",
+        "Invite disagreement"
+      ],
+      "render": {
+        "layout": "quote",
+        "ratio": "4:5"
+      },
+      "cta": "comment"
+    },
+    {
+      "id": "selectivity",
+      "name": "We turn work down",
+      "category": "post",
+      "when": "Premium positioning. Only usable when the scarcity is real — never manufacture it.",
+      "hook": "We turn down more [inquiries/projects] than we take on.",
+      "skeleton": [
+        "Hook: the ratio, stated without apology",
+        "The specific reasons a project gets declined",
+        "Why taking it anyway would hurt the business, not just you",
+        "Who it IS right for",
+        "A low-friction way to find out which they are"
+      ],
+      "render": {
+        "layout": "quote",
+        "ratio": "4:5"
+      },
+      "cta": "dm"
+    },
+    {
+      "id": "the-one-question",
+      "name": "The first question I ask",
+      "category": "post",
+      "when": "Authority through qualification. Teaches your process while filtering.",
+      "hook": "The first question I ask every [client type] is [question].",
+      "skeleton": [
+        "Hook: the question itself",
+        "Why it sounds trivial",
+        "What the answer actually reveals",
+        "What each kind of answer leads to",
+        "Soft invitation to answer it themselves"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "soft"
+    },
+    {
+      "id": "myth-vs-mechanism",
+      "name": "You don't need X, you need Y",
+      "category": "post",
+      "when": "Cut through category hype. Replaces an intimidating abstraction with a concrete cheap action.",
+      "hook": "You don't need [expensive abstract thing]. You need [small concrete thing].",
+      "skeleton": [
+        "Hook: the swap, stated plainly",
+        "Why the abstract version is what everyone sells",
+        "The three concrete things that actually matter",
+        "Name them specifically, in the reader's own vocabulary",
+        "The smallest possible next step"
+      ],
+      "render": {
+        "layout": "quote",
+        "ratio": "4:5"
+      },
+      "cta": "save"
+    },
+    {
+      "id": "quiet-outcome",
+      "name": "It wasn't the finish",
+      "category": "post",
+      "when": "Lifestyle and aspiration. The emotional counterweight to education-heavy weeks.",
+      "hook": "It wasn't the [luxury detail]. It was [the quiet, human outcome].",
+      "skeleton": [
+        "Hook: reject the obvious luxury signal",
+        "The moment that actually mattered, described physically",
+        "What made that moment possible, structurally",
+        "Why that's what you're really buying",
+        "Understated invitation"
+      ],
+      "render": {
+        "layout": "photo-overlay",
+        "ratio": "4:5"
+      },
+      "cta": "link"
+    },
+    {
+      "id": "news-hook-education",
+      "name": "News hook, translated",
+      "category": "post",
+      "when": "A real, checkable news item in your space. Timely, and the easiest recurring pillar to sustain.",
+      "hook": "[Specific, verifiable thing that just happened].",
+      "skeleton": [
+        "Hook: the news, stated concretely with the real detail",
+        "Why it sounds irrelevant to a small business",
+        "The specific way it touches their week",
+        "What to actually do about it",
+        "One-line takeaway"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "save",
+      "warning": "Only use with a real, verifiable source. Never invent the news item or its numbers."
+    },
+    {
+      "id": "founder-in-the-system",
+      "name": "I use this myself",
+      "category": "post",
+      "when": "You have no case studies yet. The strongest proof available pre-testimonial, and structurally uncopyable.",
+      "hook": "[Specific thing you did in your own business this week].",
+      "skeleton": [
+        "Hook: the real thing you did, with the real detail",
+        "The problem it solved, in hours or dollars",
+        "How you actually set it up",
+        "What it would look like in their business",
+        "Offer to show them"
+      ],
+      "render": {
+        "layout": "photo-overlay",
+        "ratio": "4:5"
+      },
+      "cta": "dm"
+    },
+    {
+      "id": "numbered-listicle",
+      "name": "N things before you X",
+      "category": "carousel",
+      "slides": 7,
+      "when": "Highest-saving carousel shape. Educational, easy to skim, easy to share.",
+      "hook": "[N] things you should know before you [big irreversible decision].",
+      "skeleton": [
+        "Slide 1: hook with the number",
+        "Slides 2-6: one item per slide, each a specific and slightly surprising claim",
+        "Final slide: what to do first, plus CTA"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "save"
+    },
+    {
+      "id": "comparison-ladder",
+      "name": "What $X vs $Y gets you",
+      "category": "carousel",
+      "slides": 6,
+      "when": "Budget education. Qualifies hard and pre-empts sticker shock.",
+      "hook": "What $[low] / $[mid] / $[high] actually gets you in [market].",
+      "skeleton": [
+        "Slide 1: the three numbers",
+        "One slide per tier: what's included, what isn't, who it fits",
+        "Slide on the mistake people make choosing between them",
+        "Final slide: how to find your tier"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "dm"
+    },
+    {
+      "id": "objection-teardown",
+      "name": "One objection per slide",
+      "category": "carousel",
+      "slides": 6,
+      "when": "You keep hearing the same hesitation on sales calls. Answer it once, publicly.",
+      "hook": "\"[The objection, in their exact words].\"",
+      "skeleton": [
+        "Slide 1: the objection quoted verbatim",
+        "Slide 2: agree with the part that's fair",
+        "Slides 3-5: the specific counter-evidence, one per slide",
+        "Final slide: the low-risk way to test it"
+      ],
+      "render": {
+        "layout": "quote",
+        "ratio": "4:5"
+      },
+      "cta": "comment"
+    },
+    {
+      "id": "process-walkthrough",
+      "name": "Stage by stage",
+      "category": "carousel",
+      "slides": 8,
+      "when": "Demystify what happens after someone hires you. Reduces the fear of the unknown.",
+      "hook": "What actually happens between [signing] and [finishing].",
+      "skeleton": [
+        "Slide 1: the two endpoints and the gap between them",
+        "One slide per real stage, named the way you name it internally",
+        "Note on where businesses usually get anxious and what you do about it",
+        "Final slide: where to start"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "save"
+    },
+    {
+      "id": "not-for-everyone",
+      "name": "We're not for everyone",
+      "category": "carousel",
+      "slides": 6,
+      "when": "Positioning piece. Run once or twice a year, not monthly — it loses force with repetition.",
+      "hook": "We're not for everyone.",
+      "skeleton": [
+        "Slide 1: the statement, alone",
+        "Slides 2-4: who this is genuinely not for, stated without contempt",
+        "Slide 5: who it is for, specifically",
+        "Final slide: an honest way to self-select"
+      ],
+      "render": {
+        "layout": "quote",
+        "ratio": "4:5"
+      },
+      "cta": "soft"
+    },
+    {
+      "id": "offer-announcement",
+      "name": "Offer announcement",
+      "category": "carousel",
+      "slides": 8,
+      "when": "Launching or filling something with limited capacity. Earns the pitch before making it.",
+      "hook": "[Contrarian reframe of the problem the offer solves].",
+      "skeleton": [
+        "Slide 1: hook — reframe, don't announce",
+        "Slide 2: the problem, in their language",
+        "Slide 3: the idea in one sentence",
+        "Slide 4: specificity — name real examples, not categories",
+        "Slide 5: proof you have (yours, if no businesses yet)",
+        "Slide 6: the format — what it actually is",
+        "Slide 7: the price and the constraint, with the reason for the constraint",
+        "Slide 8: the honest next step"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "link",
+      "warning": "If no date, price, or capacity is actually confirmed, the CTA is a waitlist — never a fabricated deadline."
+    },
+    {
+      "id": "problem-agitate-offer",
+      "name": "AIDA short form",
+      "category": "ad",
+      "when": "Cold paid traffic. The default paid structure.",
+      "hook": "[Specific number, bold claim, or status hook] — stop the scroll in 2 seconds.",
+      "skeleton": [
+        "Attention: the specific hook",
+        "Interest: reveal the complexity, show you understand",
+        "Desire: the concrete transformation",
+        "Action: one friction-reduced CTA, scarcity only if real"
+      ],
+      "render": {
+        "layout": "photo-overlay",
+        "ratio": "4:5"
+      },
+      "cta": "link"
+    },
+    {
+      "id": "budget-qualifier-ad",
+      "name": "Number-first qualifier",
+      "category": "ad",
+      "when": "You need to filter unqualified leads at the ad level rather than in the inbox.",
+      "hook": "[Project type] in [place] starts around $[N]. Here's what that buys.",
+      "skeleton": [
+        "Lead with the number — this is the filter",
+        "What's included at that level",
+        "What pushes it higher",
+        "CTA aimed only at people the number didn't scare"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "1:1"
+      },
+      "cta": "link"
+    },
+    {
+      "id": "lead-magnet-ad",
+      "name": "Low-friction download",
+      "category": "ad",
+      "when": "Cold audience that isn't ready for a consultation ask.",
+      "hook": "The [document] we give every [client type] before they [decision].",
+      "skeleton": [
+        "The asset, described as a real internal artifact",
+        "The three things it prevents",
+        "Who should not bother downloading it",
+        "Download CTA"
+      ],
+      "render": {
+        "layout": "editorial",
+        "ratio": "4:5"
+      },
+      "cta": "download"
+    },
+    {
+      "id": "before-after-reveal",
+      "name": "Project reveal",
+      "category": "other",
+      "when": "You have real photography of a finished job. Highest-performing format when the images are genuinely good.",
+      "hook": "[The single most surprising fact about the transformation].",
+      "skeleton": [
+        "Hook: the surprising constraint or discovery",
+        "What the space was, honestly",
+        "The one decision that changed everything",
+        "What it took to get there",
+        "Credit the business's nerve, not your own skill"
+      ],
+      "render": {
+        "layout": "photo-overlay",
+        "ratio": "4:5"
+      },
+      "cta": "save",
+      "warning": "Requires real photography. Never AI-generate an image depicting a real property or project."
+    }
+  ]
+}

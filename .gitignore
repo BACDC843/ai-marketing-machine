@@ -1,0 +1,39 @@
+# Business data — must never enter this repository.
+# This becomes a public marketplace repo; git history is not retrievable.
+Business/*
+!Business/_template/
+*.zip
+
+# A customer's own workspace config, if one is ever created here for testing.
+aimm-config.md
+
+# Machine state written by doctor. Environment-specific; never committed.
+.aimm/
+
+# Build output
+_scripts/plugin-packages/*.plugin
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.obsidian/
+.claudian/
+
+# Secrets — no API keys, tokens, or credentials in the repo
+.env
+.env.*
+*token*.txt
+*credentials*.json
