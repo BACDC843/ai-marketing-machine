@@ -87,3 +87,12 @@ Not sure what you have? Ask for a check-up — `doctor` reports what's working, 
 ## Skills
 
 See [`skills/README.md`](skills/README.md) for the full list and how they fit together.
+
+## Licence
+
+This repository is public so that customers can install it without a GitHub
+account. **It is not open source.** Use requires a purchased licence, and
+redistribution is not permitted — see [`LICENSE`](LICENSE).
+
+Running it needs your own Claude subscription from Anthropic, which is a
+separate agreement and is not included.

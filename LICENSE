@@ -1,0 +1,120 @@
+AI Marketing Machine — Software Licence Agreement
+Copyright (c) 2026 L and M Properties of Charleston, Inc.
+All rights reserved.
+
+"AI Marketing Machine" is a product of L and M Properties of Charleston, Inc.
+
+THIS REPOSITORY IS PUBLIC BUT IT IS NOT OPEN SOURCE.
+
+It is published openly so that customers who have purchased a licence can
+install it without needing a GitHub account. Public visibility is a delivery
+mechanism. It is not a grant of any right to copy, redistribute or resell
+this software, and nothing in this repository should be read as placing it
+in the public domain or under an open-source licence.
+
+
+1. DEFINITIONS
+
+"Software" means the files in this repository, including the skills, the
+templates, the scaffolding and the documentation.
+
+"Licensor" means the copyright holder named above.
+
+"You" means the individual or business that has purchased a licence.
+
+"Your Business" means the single business entity for which You purchased
+the licence.
+
+"Output" means the marketing content You produce using the Software —
+copy, captions, plans, graphics and similar materials.
+
+
+2. GRANT OF LICENCE
+
+On purchase, and for as long as You comply with this agreement, Licensor
+grants You a non-exclusive, non-transferable, revocable licence to:
+
+  (a) install and use the Software within Your own Claude account;
+  (b) use it to produce Output for Your Business;
+  (c) modify the Software for Your Business's own internal use.
+
+The Software is licensed, not sold. One licence covers one business.
+
+
+3. OWNERSHIP OF OUTPUT
+
+You own the Output You produce. Licensor claims no right in it, makes no
+claim to Your brand materials, and does not require attribution. You may
+use Output commercially without restriction under this agreement.
+
+
+4. RESTRICTIONS
+
+You may not:
+
+  (a) redistribute, republish, sell, rent, lease, sublicense or otherwise
+      make the Software available to anyone outside Your Business, whether
+      modified or unmodified, and whether or not for a fee;
+  (b) use the Software to operate a service that produces marketing content
+      for third parties, unless You hold a separate written agency licence
+      from Licensor;
+  (c) remove or obscure this licence or any copyright notice;
+  (d) publish copies of the Software, including to a public repository,
+      package registry or plugin marketplace.
+
+Clause 4(a) does not restrict Your Output. It restricts the Software.
+
+
+5. YOUR CLAUDE SUBSCRIPTION
+
+The Software runs inside Claude and requires Your own active Claude
+subscription from Anthropic. That subscription is a separate agreement
+between You and Anthropic, is not included in the purchase price, and is
+not provided, resold or controlled by Licensor. Licensor is not affiliated
+with, endorsed by, or acting as an agent of Anthropic. Your use of Claude
+remains subject to Anthropic's own terms.
+
+
+6. SUPPORT AND UPDATES
+
+Support and updates, where offered, are provided under whatever separate
+service or subscription arrangement You have agreed with Licensor. This
+licence does not by itself entitle You to either.
+
+
+7. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+The Software produces marketing content using a generative AI model. Output
+may contain errors, inaccuracies or claims that are unsuitable for Your
+business. You are responsible for reviewing Output before publishing it,
+and for ensuring it complies with any advertising, professional or
+regulatory rules that apply to Your trade.
+
+
+8. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE. Licensor's total liability under this agreement
+shall not exceed the amount You paid for the licence.
+
+Nothing in this agreement excludes liability that cannot lawfully be
+excluded.
+
+
+9. TERMINATION
+
+This licence terminates automatically if You breach any term of it. On
+termination You must stop using the Software and delete your copies. Output
+You produced before termination remains Yours under clause 3.
+
+
+10. ENQUIRIES
+
+For agency licences, multi-business licences, or any use not permitted
+above, contact Licensor for written permission.
